@@ -146,17 +146,34 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CScreen.hpp" />
+    <ClInclude Include="Enemigo.h" />
     <ClInclude Include="Game.hpp" />
+    <ClInclude Include="Jugador.h" />
     <ClInclude Include="Menu.hpp" />
     <ClInclude Include="screens.hpp" />
+    <ClInclude Include="SinglePlayer.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Enemigo.cpp" />
+    <ClCompile Include="Multiplayer.cpp" />
+    <ClCompile Include="Jugador.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="SinglePlayer .cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\Resources\background.jpg" />
+    <Image Include="Resources\background.jpg" />
+    <Image Include="Resources\grid-background.png" />
+    <Image Include="Resources\tron-logo.png" />
+    <Image Include="Resources\tron.jpeg" />
+    <Image Include="Resources\tron.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shader.frag" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Resources\SEASRN__.ttf" />
+    <Font Include="Resources\verdanab.ttf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

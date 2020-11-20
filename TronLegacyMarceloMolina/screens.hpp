@@ -6,6 +6,7 @@
 
 //Including each screen of application
 #include "Game.hpp"
-//#include "screen_1.hpp"  <- Menu Principal
+#include "Menu.hpp"
+#include "SinglePlayer.h"
 
 #endif // SCREENS_HPP_INCLUDED

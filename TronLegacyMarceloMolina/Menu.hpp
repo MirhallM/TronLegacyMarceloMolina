@@ -15,6 +15,6 @@ private:
 	bool jugando;
 public:
 	Menu(void);
-
-};
+	virtual int Run(RenderWindow& App);
+}; 
 #endif // MENU_HPP
