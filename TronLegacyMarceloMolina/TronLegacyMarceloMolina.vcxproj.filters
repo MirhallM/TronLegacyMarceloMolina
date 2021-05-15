@@ -36,6 +36,9 @@
     <ClInclude Include="SinglePlayer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Collision.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -56,6 +59,9 @@
     <ClCompile Include="Enemigo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Collision.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\background.jpg">
@@ -71,6 +77,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\tron-logo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bike1.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

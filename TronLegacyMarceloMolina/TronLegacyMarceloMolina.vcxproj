@@ -145,6 +145,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Collision.hpp" />
     <ClInclude Include="CScreen.hpp" />
     <ClInclude Include="Enemigo.h" />
     <ClInclude Include="Game.hpp" />
@@ -154,6 +155,7 @@
     <ClInclude Include="SinglePlayer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Collision.cpp" />
     <ClCompile Include="Enemigo.cpp" />
     <ClCompile Include="Multiplayer.cpp" />
     <ClCompile Include="Jugador.cpp" />
@@ -163,6 +165,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\background.jpg" />
+    <Image Include="Resources\bike1.png" />
     <Image Include="Resources\grid-background.png" />
     <Image Include="Resources\tron-logo.png" />
     <Image Include="Resources\tron.jpeg" />

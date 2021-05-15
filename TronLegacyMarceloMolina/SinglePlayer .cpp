@@ -5,6 +5,8 @@
 #include <iostream>
 using namespace sf;
 
+Sprite sprite;
+RenderTexture t;
 const int W = 1366, H = 768;
 bool Field[W][H] = { 0 };
 
@@ -57,13 +59,8 @@ int SinglePlayer::Run(RenderWindow& App)
 	PauseText.setString("     GAME PAUSED\n   Press P to Continue\nPress Enter to exit to Menu");
 	PauseText.setPosition(W / 4, H / 3);
 
-	Sprite sprite;
-	RenderTexture t;
-	t.create(W, H);
-	t.setSmooth(true);
-	sprite.setTexture(t.getTexture());
-	t.clear();
-	t.draw(escBackground);
+
+	Respawn(escBackground);
 
 	//Reload arena to make sure all positions are empty
 	loadArena();
@@ -97,6 +94,15 @@ int SinglePlayer::Run(RenderWindow& App)
 		}
 	}
 	return 0;
+}
+
+void SinglePlayer::Respawn(sf::Sprite& escBackground)
+{
+	t.create(W, H);
+	t.setSmooth(true);
+	sprite.setTexture(t.getTexture());
+	t.clear();
+	t.draw(escBackground);
 }
 
 void SinglePlayer::DibujarPausa(sf::RenderWindow& App, sf::Sprite& sprite, sf::Text& PauseText)
@@ -139,7 +145,23 @@ void SinglePlayer::UpdateGame(Jugador& p1, bool& Jugando, sf::RenderTexture& t)
 	for (int i = 0; i < p1.speed; i++)
 	{
 		p1.tick();
-		if (Field[p1.x][p1.y] == 1) Jugando = 0;
+		if (Field[p1.x][p1.y] == 1)
+		{
+			p1.death();
+			if (p1.livesLeft() == 0)
+			{
+				Jugando = 0;
+			}
+			else
+			{
+				loadArena();
+				Texture texture;
+				texture.loadFromFile("Resources/grid-background.png");
+				Sprite escBackground(texture);
+				Respawn(escBackground);
+				p1 = Jugador(Color::Blue, 1, p1.livesLeft());
+			}
+		}
 
 		Field[p1.x][p1.y] = 1;
 

@@ -30,35 +30,5 @@ int main(int argc, char** argv)
 	{
 		screen = Screens[screen]->Run(App);
 	}
-
-
-	//La mayoria de esto se correra dentro de las ventanas individuales 
-	//******************Legacy SFML Window Opener*************************************
-	/*//Corre el programa con tal la ventana siga abierta
-	while(App.isOpen())
-	{
-		//Revisa que todos los eventos de la ventana hayan sido lanzados desde la ultima iteracion del loop
-		Event event;
-		while (screen >= 0)
-		{
-			screen = Screens[screen]->Run(App);
-			//Cierra la ventana si el evento de cerrar es creado
-			if (event.type == Event::Closed)
-			{
-				App.close();
-			}
-		}
-
-		//Limpia todos los pixeles con negro 
-		//Necesario antes de dibujar otra pantalla
-		App.clear(Color::Black);
-
-		//Dibujar todo aqui
-		//App.draw(....);
-
-		//Terminar de dibujar el cuadro actual y mostrarlo
-		App.display();
-
-	}*/
 	return EXIT_SUCCESS;
 }

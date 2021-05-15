@@ -12,6 +12,7 @@ public:
 	void loadArena();
 	SinglePlayer(void);
 	virtual int Run(sf::RenderWindow& App);
+	void Respawn(sf::Sprite& escBackground);
 	void DibujarPausa(sf::RenderWindow& App, sf::Sprite& sprite, sf::Text& PauseText);
 	int Events(sf::RenderWindow& App, sf::Event& event, bool& retflag);
 	void DibujarMundo(sf::RenderWindow& App, sf::Sprite& sprite);
